@@ -6,6 +6,7 @@
 package com.unicodelabs.test;
 
 import com.unicodelabs.core.DumbPassword;
+import com.unicodelabs.core.exceptions.IsNullException;
 import java.io.IOException;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -20,7 +21,7 @@ public class DumbPasswordTest {
     DumbPassword dumbPasswords = new DumbPassword();
     
     @Test
-    public void testAwesomePassword() throws IOException{
+    public void testAwesomePassword() throws IOException, IsNullException{
         assertFalse(dumbPasswords.checkPassword("auth0"));
         assertFalse(dumbPasswords.checkPassword("sTraigh8#@u"));
         assertFalse(dumbPasswords.checkPassword("Pass990ver"));
@@ -29,7 +30,7 @@ public class DumbPasswordTest {
     
     
     @Test
-    public void testDumbPassword() throws IOException{
+    public void testDumbPassword() throws IOException, IsNullException{
         assertTrue(dumbPasswords.checkPassword("password"));
         assertTrue(dumbPasswords.checkPassword("12345678"));
         assertTrue(dumbPasswords.checkPassword("PASSWORD"));

@@ -6,6 +6,7 @@
 package com.unicodelabs.core.example;
 
 import com.unicodelabs.core.DumbPassword;
+import com.unicodelabs.core.exceptions.IsNullException;
 import java.io.IOException;
 
 /**
@@ -16,7 +17,7 @@ public class DumbPasswordClient {
     public static void main(String[] args) {
         DumbPassword dumbPasswords = new DumbPassword();
         try {
-            if(dumbPasswords.checkPassword("222777")){
+            if(dumbPasswords.checkPassword("")){
                 System.out.println("This password is just too common. Please try another!");
             } else {
                 //This password is awesome!
@@ -24,6 +25,8 @@ public class DumbPasswordClient {
                 System.out.println("This password is awesome");
             }
         } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IsNullException ex) {
             System.out.println(ex.getMessage());
         }
     }

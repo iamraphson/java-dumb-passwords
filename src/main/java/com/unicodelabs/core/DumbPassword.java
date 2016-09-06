@@ -5,6 +5,8 @@
  */
 package com.unicodelabs.core;
 
+import com.google.common.base.Strings;
+import com.unicodelabs.core.exceptions.IsNullException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,29 +18,43 @@ import java.util.Set;
  * @author Raphson
  */
 public class DumbPassword {
+    
     /**
      * Reads text from a character-input stream
      * @var BufferedReader
      */
     private BufferedReader br;
     
+    
+    /**
+     * Holds All Collection of dumb password
+     * @Set<Strinh>
+     */
+    private Set<String> dumbPasswordList  = null;
+    
+    
     /**
      * Check if user's password is dumb or not
      * @param inputedPassword
      * @return 
-     * @throws java.io.FileNotFoundException 
+     * @throws java.io.IOException 
+     * @throws com.unicodelabs.core.exceptions.IsNullException 
      */
-    public boolean checkPassword(String inputedPassword ) throws  IOException{
-        Set<String> dumbPasswordList = this.readPasswordResource();
-        return dumbPasswordList.contains(inputedPassword);
+    public boolean checkPassword(String inputedPassword ) throws  IOException, IsNullException{
+        if(Strings.isNullOrEmpty(inputedPassword))
+            throw new IsNullException("The Password can not be null or empty. Please pass it as a parameter");
+        
+        
+        this.dumbPasswordList = this.readPasswordResource();
+        
+        return this.dumbPasswordList.contains(inputedPassword);
     }
     
     
     /**
      * Read all collection of dumb password...
      * @return 
-     * @throws java.io.FileNotFoundException
-     * @throws java.io.UnsupportedEncodingException
+     * @throws java.io.IOException
      */
     public Set<String> readPasswordResource() throws IOException{
         Set<String> passwordSet = new HashSet<String>();
