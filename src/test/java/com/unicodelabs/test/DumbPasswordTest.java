@@ -5,10 +5,34 @@
  */
 package com.unicodelabs.test;
 
+import com.unicodelabs.core.DumbPassword;
+import java.io.IOException;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+
 /**
  *
  * @author Raphson
  */
 public class DumbPasswordTest {
     
+    DumbPassword dumbPasswords = new DumbPassword();
+    
+    @Test
+    public void testAwesomePassword() throws IOException{
+        assertFalse(dumbPasswords.checkPassword("auth0"));
+        assertFalse(dumbPasswords.checkPassword("sTraigh8#@u"));
+        assertFalse(dumbPasswords.checkPassword("Pass990ver"));
+        assertFalse(dumbPasswords.checkPassword("ummoinnerEmbassava33"));
+    }
+    
+    
+    @Test
+    public void testDumbPassword() throws IOException{
+        assertTrue(dumbPasswords.checkPassword("password"));
+        assertTrue(dumbPasswords.checkPassword("12345678"));
+        assertTrue(dumbPasswords.checkPassword("PASSWORD"));
+        assertTrue(dumbPasswords.checkPassword("superman"));
+    }
 }
