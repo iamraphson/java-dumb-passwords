@@ -36,4 +36,14 @@ public class DumbPasswordTest {
         assertTrue(dumbPasswords.checkPassword("PASSWORD"));
         assertTrue(dumbPasswords.checkPassword("superman"));
     }
+    
+    @Test(expected = IsNullException.class)
+    public void testPasswordAsNull() throws IsNullException, IOException{
+        dumbPasswords.checkPassword(null);
+    }
+    
+    @Test(expected = IsNullException.class)
+    public void testPasswordAsEmptyString() throws IsNullException, IOException{
+        dumbPasswords.checkPassword(null);
+    }
 }

@@ -17,7 +17,7 @@ public class DumbPasswordClient {
     public static void main(String[] args) {
         DumbPassword dumbPasswords = new DumbPassword();
         try {
-            if(dumbPasswords.checkPassword("")){
+            if(dumbPasswords.checkPassword("gfdgfgghjgjghgk")){
                 System.out.println("This password is just too common. Please try another!");
             } else {
                 //This password is awesome!
