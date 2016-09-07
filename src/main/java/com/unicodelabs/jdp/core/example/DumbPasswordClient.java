@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.unicodelabs.core.example;
+package com.unicodelabs.jdp.core.example;
 
-import com.unicodelabs.core.DumbPassword;
-import com.unicodelabs.core.exceptions.IsNullException;
+import com.unicodelabs.jdp.core.DumbPassword;
+import com.unicodelabs.jdp.core.exceptions.IsNullException;
 import java.io.IOException;
 
 /**

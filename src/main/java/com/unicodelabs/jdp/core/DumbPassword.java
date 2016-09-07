@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.unicodelabs.core;
+package com.unicodelabs.jdp.core;
 
 import com.google.common.base.Strings;
-import com.unicodelabs.core.exceptions.IsNullException;
+import com.unicodelabs.jdp.core.exceptions.IsNullException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,7 +38,7 @@ public class DumbPassword {
      * @param inputedPassword
      * @return 
      * @throws java.io.IOException 
-     * @throws com.unicodelabs.core.exceptions.IsNullException 
+     * @throws com.unicodelabs.jdp.core.exceptions.IsNullException 
      */
     public boolean checkPassword(String inputedPassword ) throws  IOException, IsNullException{
         if(Strings.isNullOrEmpty(inputedPassword))

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.unicodelabs.core.exceptions;
+package com.unicodelabs.jdp.core.exceptions;
 
 /**
  *
