@@ -6,7 +6,7 @@
     <packaging>jar</packaging>
     <version>1.0.0</version>
   
-   <name>com.unicodelabs.jdp:java-dumb-passwords</name>
+   <name>Dumb Password Java SDK</name>
    <description>Guard your users against entering dumb passwords in your java or JavaEE apps</description>
    <url>https://github.com/iamraphson/java-dumb-passwords</url>
   
@@ -86,7 +86,7 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <!--plugin>
+            <plugin>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
                 <executions>
@@ -98,7 +98,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin-->
+            </plugin>
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
