@@ -24,3 +24,11 @@ target
 *.bak
 scratch
 settings.xml
+
+.zsh_history
+pubring.gpg
+secring.gpg
+
+pubring.gpg.asc
+secring.gpg.asc
+settings.xml.asc
