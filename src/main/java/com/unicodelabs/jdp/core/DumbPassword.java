@@ -56,7 +56,7 @@ public class DumbPassword {
      * @return 
      * @throws java.io.IOException
      */
-    public Set<String> readPasswordResource() throws IOException{
+    private Set<String> readPasswordResource() throws IOException{
         Set<String> passwordSet = new HashSet<String>();
         
         br  = new BufferedReader(
