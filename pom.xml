@@ -5,11 +5,11 @@
     <artifactId>java-dumb-passwords</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
-  
+
    <name>Dumb Password Java SDK</name>
    <description>Guard your users against entering dumb passwords in your java or JavaEE apps</description>
    <url>https://github.com/iamraphson/java-dumb-passwords</url>
-  
+
     <licenses>
         <license>
           <name>MIT License</name>
@@ -17,7 +17,7 @@
           <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <developers>
         <developer>
           <name>Ayeni Olusegun</name>
@@ -27,19 +27,19 @@
           <timezone>+1</timezone>
         </developer>
     </developers>
-    
+
     <scm>
         <url>git@github.com:iamraphson/java-dumb-passwords.git</url>
         <connection>scm:git@github.com:iamraphson/java-dumb-passwords.git</connection>
         <developerConnection>scm:git@github.com:iamraphson/java-dumb-passwords.git</developerConnection>
     </scm>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-  
+
   <dependencies>
     <dependency>
         <groupId>junit</groupId>
@@ -53,7 +53,7 @@
         <version>19.0</version>
     </dependency>
   </dependencies>
-  
+
     <build>
         <plugins>
             <plugin>
@@ -86,7 +86,7 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--plugin>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
                 <executions>
@@ -98,7 +98,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
@@ -131,7 +131,6 @@
                     <serverId>ossrh</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                    <stagingProfileId>1668b813e27e98</stagingProfileId>
                 </configuration>
             </plugin>
         </plugins>
@@ -147,5 +146,5 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-  
+
 </project>
