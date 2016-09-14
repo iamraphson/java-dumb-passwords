@@ -34,10 +34,55 @@ final DumbPassword dumbPasswords = new DumbPassword();
 ## API
 #### dumbPasswords.checkPassword(string) => true or false
 Check if the string provided, representing the user's proposed submitted password is not one of the
-**top 10,000 worst passwords** users use.
+**top 10,000 worst passwords** users use. returns `true` if the password is one of them and `false` if the password is not.
+```java
+try {
+    if(dumbPasswords.checkPassword("gfdgfgghjgjghgk")){
+        System.out.println("This password is just too common. Please try another!");
+    } else {
+        //This password is awesome!
+        //This user SMART! Give them the Major key! #takeit!!
+        System.out.println("This password is awesome");
+    }
+} catch (IOException ex) {
+    System.out.println(ex.getMessage());
+} catch (IsNullException ex) {
+    System.out.println(ex.getMessage());
+}
+ ```
+# Example
+Here is an example
 
-returns `true` if the password is one of them and `false` if the password is not.
+```java
+package com.unicodelabs.jdp.core.example;
 
+import com.unicodelabs.jdp.core.DumbPassword;
+import com.unicodelabs.jdp.core.exceptions.IsNullException;
+import java.io.IOException;
+
+/**
+ *
+ * @author Raphson
+ */
+public class DumbPasswordClient {
+    public static void main(String[] args) {
+        DumbPassword dumbPasswords = new DumbPassword();
+        try {
+            if(dumbPasswords.checkPassword("gfdgfgghjgjghgk")){
+                System.out.println("This password is just too common. Please try another!");
+            } else {
+                //This password is awesome!
+                //This user SMART! Give them the Major key! #takeit!!
+                System.out.println("This password is awesome");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IsNullException ex) {
+           Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}
+```
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
